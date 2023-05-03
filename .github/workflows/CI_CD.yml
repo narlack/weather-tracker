@@ -35,6 +35,10 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      # Lint full application
+      - name: Test application
+        run: npm run lint
+
       # Execute test to validate application
       - name: Test application
         run: npm run test
