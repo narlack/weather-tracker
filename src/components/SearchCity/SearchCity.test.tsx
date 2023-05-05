@@ -20,7 +20,9 @@ describe('SearchCity', () => {
 
   test('Should call alert if provided empty value', () => {
     const alertMock = jest.spyOn(window, 'alert');
-    alertMock.mockImplementation(() => {})
+    alertMock.mockImplementation(() => {
+      // dump function to mock alert() call
+    })
     render(<SearchCity />);
 
     act(()=> {

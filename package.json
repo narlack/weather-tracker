@@ -18,7 +18,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "lint": "npx eslint",
+    "lint": "npx eslint --fix src",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --coverage --watchAll=false --collectCoverage=true",
@@ -71,10 +71,10 @@
     }
   },
   "lint-staged": {
-    "*.{ts,js,html,scss,css,json}": [
+    "*.{ts,tsx,js,html,scss,css,json}": [
       "prettier --write"
     ],
-    "*.{ts,js}": [
+    "*.{ts,tsx,js}": [
       "eslint --fix"
     ]
   }

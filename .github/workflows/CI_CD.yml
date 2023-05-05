@@ -36,7 +36,7 @@ jobs:
         run: npm ci
 
       # Lint full application
-      - name: Test application
+      - name: Lint application
         run: npm run lint
 
       # Execute test to validate application
