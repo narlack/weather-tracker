@@ -20,7 +20,7 @@
     "lint": "npx eslint",
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test --coverage --watchAll=false --collectCoverage=true",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -49,6 +49,20 @@
     "husky": "^8.0.3",
     "lint-staged": "^13.2.2",
     "prettier": "^2.8.8"
+  },
+  "jest": {
+    "collectCoverageFrom" : [
+      "!src/index.tsx",
+      "!src/reportWebVitals.ts"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 80,
+        "functions": 80,
+        "lines": 80,
+        "statements": -10
+      }
+    }
   },
   "husky": {
     "hooks": {
