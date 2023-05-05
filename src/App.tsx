@@ -1,24 +1,19 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import SearchCity from './components/SearchCity/SearchCity';
+import { LanguageContextProvider } from './context/LanguageContext/LanguageContext';
+import Header from './components/Header/Header';
+import Layout from './components/Layout/Layout';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer">
-          Learn React
-        </a>
-      </header>
-    </div>
+    <LanguageContextProvider>
+      <Header/>
+      <Layout>
+        <h1 data-testid="a-title">Weather tracker</h1>
+        <SearchCity/>
+      </Layout>
+    </LanguageContextProvider>
   );
 }
 

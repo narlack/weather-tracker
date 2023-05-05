@@ -1,0 +1,30 @@
+.search-city {
+  position: relative;
+}
+
+.search-input {
+  width: 100%;
+  border: solid 1px transparent;
+  border-radius: 25px;
+  height: 40px;
+  box-sizing: border-box;
+  padding: 0 55px 0 14px;
+  box-shadow: 0 2px 5px 1px rgba(64, 60, 67, 0.16);
+}
+
+.search-button {
+  position: absolute;
+  right: 15px;
+  width: 30px;
+  height: 40px;
+  padding: 5px 0;
+  background: transparent;
+  border: none;
+  z-index: 2;
+}
+
+.search-icon {
+  height: 30px;
+  width: 30px;
+  fill: dodgerblue;
+}

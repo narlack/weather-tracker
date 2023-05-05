@@ -1,0 +1,13 @@
+header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: 40px;
+
+  position: sticky;
+
+  padding: 5px 20px;
+  margin-bottom: 20px;
+
+  border-bottom: solid 1px lightgray;
+}
