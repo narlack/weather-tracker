@@ -1,8 +1,13 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import './SearchCity.css';
 import { CiSearch } from 'react-icons/ci';
+import LanguageContext from '../../context/LanguageContext/LanguageContext';
+import { getWeatherThunk } from '../../store/action/weather-action';
+import { useDispatch } from 'react-redux';
 
 function SearchCity() {
+  const languageContext = useContext(LanguageContext);
+  const dispatch = useDispatch();
   const [searchValue, setSearchValue] = useState('');
 
   const inputChangesHandler = (event: React.ChangeEvent<HTMLInputElement>): void => {
@@ -13,7 +18,8 @@ function SearchCity() {
     event.preventDefault();
 
     if (searchValue) {
-      // TODO send the value to api
+      // @ts-ignore TODO: update dispatch types for thunk
+      dispatch(getWeatherThunk(searchValue, languageContext.language));
     } else {
       alert('Please provide some value');
     }
@@ -29,7 +35,7 @@ function SearchCity() {
         data-testid="sc-input"
         className="search-input"></input>
       <button aria-label="search city" data-testid="sc-button" className="search-button">
-        <CiSearch aria-label="search icon" className="search-icon"/>
+        <CiSearch aria-label="search icon" className="search-icon" />
       </button>
     </form>
   );

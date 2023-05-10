@@ -8,11 +8,11 @@ import Layout from './components/Layout/Layout';
 function App() {
   return (
     <LanguageContextProvider>
-      <Header/>
+      <Header />
       <Layout>
         <h1 data-testid="a-title">Weather tracker</h1>
-        <SearchCity/>
-      </Layout>
+        <SearchCity />
+       </Layout>
     </LanguageContextProvider>
   );
 }
